@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff00cc, #3333ff, #00ff99);
+    background-size: 500% 500%;
+    animation: bgAnimation 8s infinite alternate;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #fff;
+    text-align: center;
+    }
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 3px 3px 5px black, -2px -2px 5px yellow;
+    margin-top: 20px;
+}
+
+input {
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 3px transparent black;
+    border-radius: 12px;
+    background: #fff7e6;
+    color: #000;
+    width: 250px;
+    margin-top: 20px;
+    transition: transform 0.2s ease;
+}
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background: linear-gradient(to right, #ff6600, #ffcc00);
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #000;
+    box-shadow: 0px 0px 15px #ffcc00;
+    transition: transform 0.3s ease,
+}
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff00cc, #ffcc00);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+li {
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    margin: 12px auto;
+    width: 300px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: popIn 0.4s ease;
+    box-shadow: 0px 0px 15px rgba(255,255,255,0.5);
+}
+
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+li button {
+    background: red;
+    color: white;
+    border-radius: 10%;
+    padding: 10px;
+    width: 50px;
+    height: 40px;
+    font-size: 0.7rem;
+    box-shadow: 0 0 10px red;
+    align-items: center;
+}
+li button:hover {
+    background: yellow;
+    color: black;
+}

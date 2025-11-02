@@ -1,0 +1,20 @@
+let button = document.querySelector("button");
+let inp = document.querySelector("input");
+let ul = document.querySelector("ul")
+
+button.addEventListener("click",function(){
+    let item = document.createElement("li");
+    item.innerText = inp.value;
+    let dlbtn = document.createElement("button");
+    dlbtn.innerText = "delete";
+    dlbtn.classList.add("delete");
+    item.appendChild(dlbtn);
+    ul.appendChild(item);
+    inp.value="";
+    ul.addEventListener("click",function(event){
+        if (event.target.nodeName == "BUTTON"){
+            let listItem = event.target.parentElement;
+            listItem.remove();
+        }
+    })
+});
